@@ -1,6 +1,6 @@
 import pandas as pd
 
-df = pd.read_csv('../Data/superstore.csv', encoding='cp1252')
+df = pd.read_csv('../Data/Task-1/superstore.csv', encoding='cp1252')
 
 # 1. Clean column names (lowercase and underscores)
 df.columns = [c.lower().replace(' ', '_').replace('-', '_') for c in df.columns]
@@ -15,4 +15,4 @@ df['order_date'] = pd.to_datetime(df['order_date'], format='mixed')
 df['ship_date'] = pd.to_datetime(df['ship_date'], format='mixed')
 
 # 3. Export to a 'Clean' version for Excel
-df.to_csv('../Data/superstore_cleaned.csv', index=False)
+df.to_csv('../Data/Task-1/superstore_cleaned.csv', index=False)
